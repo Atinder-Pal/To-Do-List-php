@@ -5,12 +5,21 @@
     {
         $_SESSION['task'] = array();
     }
-    //check if their a submission via "POST" and the $_POST['newTask'] is not submitted empty
-    if( !empty($_POST) && $_POST['newTask'] != '' )
+      
+    //check if their a submission via "POST" and the $_POST['newTask'] is not submitted empty 
+    // also checking if the submitted task is not present in the list already
+    // Citation
+    // https://stackoverflow.com/questions/2166512/php-case-insensitive-in-array-function
+    // I did not know how to use in_array method to make my search case-insensitive
+    // Above website shows a solution to first change all elements in array to lowercase
+    // by using array_map('strtolower',$array_name)
+    // and then passing this directly to in-array method
+    if( !empty($_POST) && $_POST['newTask'] != '' 
+        && !(in_array(strToLower($_POST['newTask']), array_map('strtolower', $_SESSION['task']))))
     {
         array_push($_SESSION['task'], $_POST['newTask'] );
     }
-    
+    // End Citation
 ?>
 <h3>To-Do List</h3>
 
