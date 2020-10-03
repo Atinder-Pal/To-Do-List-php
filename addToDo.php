@@ -5,16 +5,25 @@
     {
         $_SESSION['task'] = array();
     }
-    
+    // Citation
+    // https://www.geeksforgeeks.org/how-to-call-php-function-on-the-click-of-a-button/
+    // Above source shows how to call a php function on click of a button using php only (no JS)
     if( isset( $_POST['addTask'] ))
     {
         pushToSession();
     }
     elseif( isset( $_POST['reset'] )) 
     {
-        echo "Reset button was pressed";
+        // Citation
+        //https://www.w3schools.com/php/php_sessions.asp
+        // remove all session variables
+        session_unset();
+
+        // destroy the session
+        session_destroy(); 
+        // End Citation
     }  
-        
+    //End Citation   
     
     function pushToSession()
     {
