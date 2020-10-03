@@ -6,8 +6,8 @@
         $_SESSION['task'] = array();
     }
       
-    //check if their a submission via "POST" and the $_POST['newTask'] is not submitted empty 
-    // also checking if the submitted task is not present in the list already
+    //check if there is a submission via "POST" and the $_POST['newTask'] is not submitted empty 
+    // also check if the submitted task is not present in the list already
     // Citation
     // https://stackoverflow.com/questions/2166512/php-case-insensitive-in-array-function
     // I did not know how to use in_array method to make my search case-insensitive
