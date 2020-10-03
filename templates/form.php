@@ -4,7 +4,9 @@
         Add new task:
         <input id="newTask" type="text" value="" name="newTask" >
     </label>
-    <input type="submit" value="Add to List">
+    <input type="submit" name="addTask" value="Add to List">
+    <input type="submit" name="reset" value="Reset">
+
 </form>
 
 
