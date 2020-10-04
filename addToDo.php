@@ -54,7 +54,7 @@
     <ul>
         <?php foreach ( $_SESSION['task'] as $newTask ) : ?>
             <li>
-                <?php echo $newTask; ?>
+            <input type="checkbox" name="completedTasks[]" value='<?php echo $newTask; ?>'><?php echo $newTask; ?></input>
             </li>
         <?php endforeach; ?>
     </ul>

@@ -2,7 +2,7 @@
 <form action="#" method="POST">
     <label for="newTask">
         Add new task:
-        <input id="newTask" type="text" value="" name="newTask" >
+        <input id="newTask" type="text" value="" name="newTask" autofocus>
     </label>
     <input type="submit" name="addTask" value="Add to List">
     <input type="submit" name="reset" value="Reset">

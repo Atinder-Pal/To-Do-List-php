@@ -11,5 +11,7 @@ include dirname(__FILE__).'/templates/form.php';
 //Show To-Do List and add tasks to it as we submit new tasks via form
 include dirname(__FILE__).'/addToDo.php';
 
+include dirname(__FILE__).'/addToComplete.php';
+
 // Show Footer
 include dirname(__FILE__).'/templates/footer.php';
