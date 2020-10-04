@@ -48,6 +48,7 @@ h1 + section label {
     background-color:#F2B441;  
     padding:0.8vw;
     font-weight: 500;
+    border-radius: 0.3rem;
 }
 #reset-button {
     margin-right: 4vw;
@@ -87,7 +88,8 @@ h1 + section label {
     font-size: 0.95rem;
     font-weight: 500;
     background-color:#F2B441;  
-    padding:0.8vw;    
+    padding:0.8vw;   
+    border-radius: 0.3rem; 
 }
 
 #add-task-button:hover, #reset-button:hover, #completed-button:hover {
@@ -143,7 +145,7 @@ footer {
     }
     #add-task-button, #reset-button {
         font-size: 1.2rem;          
-        padding:0.8vw;
+        padding:0.6vw;
         font-weight: 500;
     }    
     .flex{ 
@@ -159,7 +161,7 @@ footer {
     #completed-button, #hidden{        
         font-size: 1.2rem;
         font-weight: 500;          
-        padding:0.8vw;        
+        padding:0.6vw;        
     }   
     li {
         margin-left:0vw;
@@ -178,4 +180,22 @@ footer {
         padding-top:2vh;
         font-size: 1.25rem;        
     }
+}
+
+@media screen and (min-width:1024px)
+{    
+    h1 + section {                
+        padding-top:3vh; 
+        height:20vh; 
+        width:70%;    
+    }        
+    .flex{ 
+        width:70%;      
+    }
+    .flex section{               
+        min-height: 52vh;       
+    }  
+    .flex > section:nth-of-type(2) h3 {
+        margin-bottom:9vh;
+    }     
 }
