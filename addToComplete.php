@@ -1,25 +1,34 @@
 <?php
     session_start();
-    if ( !isset( $_SESSION['completedList'] ) )
+    function addToCompletedList()
     {
-        $_SESSION['completedList'] = array();
-    }
-    if( isset($_POST['complete']) )
-    {
+        if ( !isset( $_SESSION['completedList'] ) )
+        {
+            $_SESSION['completedList'] = array();
+        }
+        
         if( !empty($_POST['completedTasks']) )
         {            
             //Thanks to Birm, Fahad and Ummer for explaining concept of '...' operator
-            $_SESSION['completedList'] = [...$_SESSION['completedList'],...$_POST['completedTasks']];            
+            $_SESSION['completedList'] = [...$_SESSION['completedList'],...$_POST['completedTasks']]; 
+            
+            // Citation
+            // http://kajstrom.fi/2018/05/29/delete-an-item-from-an-array-without-a-loop-in-php/
+            // How to delete items from array without knowing index
+            $_SESSION['task'] = array_values(array_diff($_SESSION['task'], $_SESSION['completedList']));
+            // End Citation
+            
+            // ========Another method to delete items from Array=======
+            // foreach ( $_POST['completedTasks'] as $completedTask )
+            // {
+            //     // Citation
+            //     // https://www.daniweb.com/programming/web-development/threads/413529/               remove-single-element-in-session-array
+            //     //Got to know about array_search function from above source
+            //     $index = array_search($completedTask,$_SESSION['task']);
+            //     unset($_SESSION['task'][$index]);
+            //     //End Citation                
+            // }  
+            // =============================================================
         }
-        
-        //var_dump($_SESSION['completedList']);
-    }
+    }  
 ?>
-<h3>Completed To-Dos</h3>
-<?php if ( isset($_SESSION['completedList']) ) : ?>
-    <ul>
-        <?php foreach ( $_SESSION['completedList'] as $completedTask ) : ?>
-            <li> <?php echo $completedTask; ?> </li>
-        <?php endforeach; ?>
-    </ul>
-    <?php endif; ?>

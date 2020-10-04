@@ -1,5 +1,6 @@
 <?php
     session_start();
+    require_once( './addToComplete.php' );
     //check if $_SESSION['task'] has been set or not, if not-set it to an array
     if ( !isset( $_SESSION['task'] ) )
     {
@@ -23,8 +24,11 @@
         session_destroy(); 
         // End Citation
     }  
-    //End Citation   
-    
+    //End Citation  
+    elseif( isset($_POST['complete']) )
+    {
+        addToCompletedList();
+    }
     function pushToSession()
     {
         //check if there is a submission via "POST" and the $_POST['newTask'] is not submitted empty 
@@ -42,7 +46,14 @@
         }
         // End Citation
     }
-    
+    // if( isset($_POST['complete']) )
+    // {
+    //     if( !empty($_POST['completedTasks']) )
+    //     {   
+    //         $_SESSION['task'] = array_values(array_diff($_SESSION['task'], $_SESSION['completedList']));
+    //         //var_dump( $_SESSION['task'] ); 
+    //     }
+    // }
 ?>
 <h3>To-Do List</h3>
 
@@ -54,7 +65,9 @@
     <ul>
         <?php foreach ( $_SESSION['task'] as $newTask ) : ?>
             <li>
-            <input type="checkbox" name="completedTasks[]" value='<?php echo $newTask; ?>'><?php echo $newTask; ?></input>
+                <input type="checkbox" name="completedTasks[]" value='<?php echo $newTask; ?>'>
+                    <?php echo $newTask; ?>
+                </input>
             </li>
         <?php endforeach; ?>
     </ul>
