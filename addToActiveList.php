@@ -29,7 +29,7 @@
     {
         addToCompletedList();
     }
-    
+
     function pushToSession()
     {
         //check if there is a submission via "POST" and the $_POST['newTask'] is not submitted empty 
@@ -48,22 +48,23 @@
         // End Citation
     }    
 ?>
-
-<h3>To-Do List</h3>
-<form action="#" method = "POST">
-    <input type="submit" name="complete" value="Completed!">
-    <?php if ( isset($_SESSION['task']) ) : ?>
-    <ul>
-        <?php foreach ( $_SESSION['task'] as $newTask ) : ?>
-            <li>
-                <input type="checkbox" name="completedTasks[]" value='<?php echo $newTask; ?>'>
-                    <?php echo $newTask; ?>
-                </input>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-    <?php endif; ?>
-</form>
-    
+    <div class="flex">
+        <section>
+            <h3>To-Do List</h3>
+            <form action="#" method = "POST">
+                <input type="submit" name="complete" value="Completed!" id="completed-button">
+                <?php if ( isset($_SESSION['task']) ) : ?>
+                <ul>
+                    <?php foreach ( $_SESSION['task'] as $newTask ) : ?>
+                        <li>
+                            <input type="checkbox" name="completedTasks[]" value='<?php echo $newTask; ?>'>
+                                <?php echo $newTask; ?>
+                            
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <?php endif; ?>
+            </form>
+        </section>   
    
       

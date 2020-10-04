@@ -1,5 +1,5 @@
-<footer>
-    <h2>Footer Details</h2>
+
+<footer>    
     <p>
       &copy;
       <?php //Citation ?>
