@@ -47,7 +47,10 @@
 <h3>To-Do List</h3>
 
 <!--For TESTING: var_dump($_SESSION['task']); -->
-<?php if ( isset($_SESSION['task']) ) : ?>
+
+<form action="#" method = "POST">
+    <input type="submit" name="complete" value="Completed!">
+    <?php if ( isset($_SESSION['task']) ) : ?>
     <ul>
         <?php foreach ( $_SESSION['task'] as $newTask ) : ?>
             <li>
@@ -55,6 +58,8 @@
             </li>
         <?php endforeach; ?>
     </ul>
-<?php endif; ?>
+    <?php endif; ?>
+</form>
+    
    
       

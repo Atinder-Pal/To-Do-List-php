@@ -6,7 +6,6 @@
     </label>
     <input type="submit" name="addTask" value="Add to List">
     <input type="submit" name="reset" value="Reset">
-
 </form>
 
 
