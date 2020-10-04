@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once( './addToComplete.php' );
+    require_once( './addToCompletedList.php' );
     //check if $_SESSION['task'] has been set or not, if not-set it to an array
     if ( !isset( $_SESSION['task'] ) )
     {

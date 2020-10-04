@@ -9,7 +9,7 @@ include dirname(__FILE__).'/templates/header.php';
 include dirname(__FILE__).'/templates/addToDoTask.php';
 
 //Show To-Do List and add tasks to it as we submit new tasks via form
-include dirname(__FILE__).'/addToDo.php';
+include dirname(__FILE__).'/addToActiveList.php';
 
 // Show Completed To-Dos
 include dirname(__FILE__).'/displayCompletedList.php';
