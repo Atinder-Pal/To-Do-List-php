@@ -32,8 +32,8 @@ h1 + section {
     margin:3vh auto 0 auto;
     padding-top:4vh;
     text-align: center;
-    border:0.3rem solid black;
-    border-bottom:0rem solid black;
+    border:0.3rem solid #748C6D;
+    border-bottom:0rem solid #748C6D;
     background-color: #CADFDA66;
 }
 h1 + section label {
@@ -64,7 +64,7 @@ h1 + section label {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: center;
-    border:0.348rem solid black;
+    border:0.348rem solid #748C6D;
     background-color: #CADFDA66;
 }
 .flex section{
@@ -73,7 +73,7 @@ h1 + section label {
     min-height: 50vh;       
 }
 .flex > section:first-of-type {
-    border-right:0.3rem solid black;
+    border-right:0.3rem solid #748C6D;
 }
 .flex section h3 {
     text-align: center;
@@ -91,7 +91,7 @@ h1 + section label {
     
 }
 #add-task-button:hover, #reset-button:hover, #completed-button:hover {
-    background-color:#F2B441;
+    background-color: #5E7A8F;
 }
 li {
     margin-left:0vw;
