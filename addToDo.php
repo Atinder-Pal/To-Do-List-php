@@ -45,20 +45,10 @@
             array_push($_SESSION['task'], $_POST['newTask'] );
         }
         // End Citation
-    }
-    // if( isset($_POST['complete']) )
-    // {
-    //     if( !empty($_POST['completedTasks']) )
-    //     {   
-    //         $_SESSION['task'] = array_values(array_diff($_SESSION['task'], $_SESSION['completedList']));
-    //         //var_dump( $_SESSION['task'] ); 
-    //     }
-    // }
+    }    
 ?>
+
 <h3>To-Do List</h3>
-
-<!--For TESTING: var_dump($_SESSION['task']); -->
-
 <form action="#" method = "POST">
     <input type="submit" name="complete" value="Completed!">
     <?php if ( isset($_SESSION['task']) ) : ?>
