@@ -3,7 +3,7 @@
     <label for="newTask">
         Add new task:
        <?php //Thanks to Birm for suggesting 'autofocus'?>
-        <input id="newTask" type="text" value="" name="newTask" placeholder="New Task" autofocus required>
+        <input id="newTask" type="text" value="" name="newTask" placeholder="New Task"  autofocus >
     </label>
     <input type="submit" name="addTask" value="Add to List">
     <input type="submit" name="reset" value="Reset">

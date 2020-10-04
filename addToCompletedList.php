@@ -18,17 +18,18 @@
             $_SESSION['task'] = array_values(array_diff($_SESSION['task'], $_SESSION['completedList']));
             // End Citation
             
-            // ========Another method to delete items from Array=======
+            // ===================Another method to delete items from Array==========
             // foreach ( $_POST['completedTasks'] as $completedTask )
             // {
             //     // Citation
-            //     // https://www.daniweb.com/programming/web-development/threads/413529/               remove-single-element-in-session-array
+            //     // https://www.daniweb.com/programming/web-development/threads/413529/remove-single-element-in-session-array
             //     //Got to know about array_search function from above source
             //     $index = array_search($completedTask,$_SESSION['task']);
             //     unset($_SESSION['task'][$index]);
             //     //End Citation                
             // }  
-            // =============================================================
+            // =======================================================================
         }
-    }  
+    }      
 ?>
+

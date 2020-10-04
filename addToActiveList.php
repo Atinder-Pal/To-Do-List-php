@@ -29,6 +29,7 @@
     {
         addToCompletedList();
     }
+    
     function pushToSession()
     {
         //check if there is a submission via "POST" and the $_POST['newTask'] is not submitted empty 
